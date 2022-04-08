@@ -11,10 +11,12 @@ import { useState } from "react";
 import TT from "./Component/TT/TT";
 
 // Initialize Firebase Authentication and get a reference to the service
-const auth = getAuth(app);
+const auth = getAuth(app);//const auth = getAuth(app) ফাঙ্কশন এর বাহিরে রাখা হয় accessibility এর জন্য
+//getAuth() মেথড কল করা হয় firebase এর authentication লাইব্রেরি কে ব্যাবহার করার জন্য
 
 function App() {
   //declaring a state to show the user data if the login was success full
+  
   const [user, setUser] = useState({});
 
   const googleProvider = new GoogleAuthProvider(); //this one gives the pop up for google sign in
